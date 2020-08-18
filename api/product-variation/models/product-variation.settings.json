@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_variations",
+  "info": {
+    "name": "product variation"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "sale_price": {
+      "type": "decimal"
+    },
+    "sale": {
+      "type": "boolean",
+      "default": false
+    },
+    "stock": {
+      "type": "boolean",
+      "default": true
+    },
+    "sku": {
+      "type": "string"
+    },
+    "variation_name": {
+      "type": "string"
+    },
+    "product": {
+      "via": "product_variations",
+      "model": "product"
+    }
+  }
+}
